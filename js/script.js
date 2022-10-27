@@ -61,7 +61,7 @@ createApp({
     },
     methods: {
         showNext: function() {
-            if (this.currentSlide < this.slides.length - 1){
+            if (this.currentSlide < this.slides.image.length - 1){
                 currentSlide++;
             } else {
                 this.currentSlide = 0;
@@ -71,8 +71,11 @@ createApp({
             if (this.currentSlide > 0) {
                 currentSlide--;
             } else {
-                this.currentSlide = this.slides.length - 1;
+                this.currentSlide = this.slides.image.length - 1;
             }
+        },
+        showSlide(clickedSlide){
+            this.currentSlide = clickedSlide;
         }
     }
 }).mount(`#app`);
