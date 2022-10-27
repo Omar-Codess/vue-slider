@@ -55,21 +55,21 @@ createApp({
                     'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam.',
                     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis.',
                 ]
-            },
-        currentSlide: 0
+            },        
+            currentSlide: 0
         };
     },
     methods: {
         showNext: function() {
             if (this.currentSlide < this.slides.image.length - 1){
-                currentSlide++;
+                this.currentSlide++;
             } else {
                 this.currentSlide = 0;
             }
         },
         showPrev: function() {
             if (this.currentSlide > 0) {
-                currentSlide--;
+                this.currentSlide--;
             } else {
                 this.currentSlide = this.slides.image.length - 1;
             }
@@ -79,3 +79,4 @@ createApp({
         }
     }
 }).mount(`#app`);
+
