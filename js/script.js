@@ -60,6 +60,19 @@ createApp({
         };
     },
     methods: {
-
+        showNext: function() {
+            if (this.currentSlide < this.slides.length - 1){
+                currentSlide++;
+            } else {
+                this.currentSlide = 0;
+            }
+        },
+        showPrev: function() {
+            if (this.currentSlide > 0) {
+                currentSlide--;
+            } else {
+                this.currentSlide = this.slides.length - 1;
+            }
+        }
     }
-}).mount(`#app`)
+}).mount(`#app`);
